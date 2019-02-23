@@ -6,11 +6,6 @@ import java.awt.Toolkit;
 public class Background {
 	Image backgroundImage = Toolkit.getDefaultToolkit().getImage("background.jpg");
 	int x,y;
-	public Background()
-	{
-	x = 0;
-	y = 50;
-	}
 	public Background(int placement)
 	{
 		x = placement;
@@ -18,7 +13,7 @@ public class Background {
 	}
 	public void drawBackground(Graphics g)
 	{
-		g.drawImage(backgroundImage, x, y, 1250, 500, null);
+		g.drawImage(backgroundImage, x, y, 1250, 590, null);
 		
 	}
 	public void scrollBackground()

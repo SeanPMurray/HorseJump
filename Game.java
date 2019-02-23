@@ -10,7 +10,7 @@ public class Game extends JPanel implements KeyListener {
 	private static final long serialVersionUID = 1L;
 	
 	Player player = new Player();
-    Background bg = new Background();
+    Background bg = new Background(0);
     Background bg2 = new Background(1250);
     public Game()
     {
