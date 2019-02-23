@@ -26,7 +26,7 @@ public  class Player {
 	public void drawPlayer(Graphics g)
 	{
 		g.drawImage(playerImage.getSubimage(300*frameX, 300*frameY, 300, 300), x, y, null);
-		if (count < 6) count ++;
+		if (count < Main.SCROLL_SPEED) count ++;
 		else 
 		{
 			if (frameX == 3 && frameY == 0) frameY ++;
@@ -39,16 +39,12 @@ public  class Player {
 
 	public void jump()
 	{
-		if(Game.jump && y >= 0)
-			jumpPower += 2;
-		else if (!Game.jump && jumpPower > 0)
-		{
-			y -= 10;
-			jumpPower --;
-		}
-		else if(!Game.jump && jumpPower == 0 && y < 415)
-		{
-			y += 10;
-		} 
+		if(Game.jump) jumpPower ++;
+		else if(!Game.jump && jumpPower > 0) jumpPower --;
+		
+		if(!Game.jump && jumpPower > 0 && y > 0) // Up
+			y -= Main.SCROLL_SPEED;
+		else if ((jumpPower == 0 || Game.jump) && y < 415) // Down
+			y += Main.SCROLL_SPEED;
 	}
 }
