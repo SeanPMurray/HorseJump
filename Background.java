@@ -4,7 +4,7 @@ import java.awt.Toolkit;
 
 
 public class Background {
-	Image backgroundImage = Toolkit.getDefaultToolkit().getImage("Images/background.png");
+	Image backgroundImage = Toolkit.getDefaultToolkit().getImage("background.jpg");
 	int x,y;
 	public Background()
 	{
