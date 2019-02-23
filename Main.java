@@ -6,7 +6,7 @@ public class Main {
 			  WIDTH = 800;
 	
 	public static void main(String args[]){
-		JFrame frame = new JFrame("Game With Tristan :)       V .00000006");
+		JFrame frame = new JFrame("Horse Jump V.0001");
 		frame.add(new Game());
 		frame.setSize(WIDTH,HEIGHT);
 		frame.setVisible(true);
