@@ -12,9 +12,12 @@ public class Game extends JPanel implements KeyListener {
 	Player player = new Player();
     Background bg = new Background(0);
     Background bg2 = new Background(1250);
+    Obstacle logs = new Obstacle();
+    
     public Game()
     {
     	player.initPlayerImage();
+    	logs.initObstacleImage();
         this.addKeyListener(this);
         setFocusable(true);
     }
@@ -25,8 +28,11 @@ public class Game extends JPanel implements KeyListener {
         
         bg.scrollBackground();
         bg2.scrollBackground();
+        logs.scrollObstacle();
+ 
         bg.drawBackground(g);
         bg2.drawBackground(g);
+        logs.drawObstacle(g);
         
         player.jump();
         player.drawPlayer(g);
