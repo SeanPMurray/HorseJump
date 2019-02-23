@@ -6,9 +6,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-
-
-
 public class Player {
 
 	boolean grounded = true;
@@ -16,26 +13,14 @@ public class Player {
 	final int x = 100;
 	int y = 500;
 	int jumpPower = 0;
-	List<Color> colors = Arrays.asList(Color.BLACK, Color.RED, Color.BLUE, Color.CYAN, Color.GREEN);
-	Color playerColor = colors.get(0);
 	Image playerImages = Toolkit.getDefaultToolkit().getImage("Images/NinjaFirstEddition.png");
 	
 	public void drawPlayer(Graphics g)
 	{
-		Random rand = new Random();
 		if(y == 500 && !Game.jump){
-			count += rand.nextInt(10);
-			if(count%100 == 0)
-				playerColor = getPlayerColor();
 			
 		}
-		g.setColor(playerColor);
 		g.fillRect(x, y, 50, 50);
-	}
-	
-	public Color getPlayerColor(){
-		Random rand = new Random();		
-		return colors.get(rand.nextInt(colors.size()));		
 	}
 	
 	public void jump()
