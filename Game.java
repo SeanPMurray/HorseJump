@@ -10,8 +10,6 @@ public class Game extends JPanel implements KeyListener {
 	private static final long serialVersionUID = 1L;
 	
 	Player player = new Player();
-    Wall wall = new Wall();
-    Wall wall2 = new Wall(Main.WIDTH + Main.WIDTH / 2, 450);
     Background bg = new Background();
     Background bg2 = new Background(1250);
     public Game()
@@ -31,11 +29,6 @@ public class Game extends JPanel implements KeyListener {
         
         player.jump();
         player.drawPlayer(g);
-        
-        wall.moveWall();
-        wall2.moveWall();
-        wall.drawWall(g);
-        wall2.drawWall(g);
         
         SleepRefresh();
     }
