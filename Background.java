@@ -20,7 +20,7 @@ public class Background {
 	{
 		if(x > -1250)
 		{
-			x-= 2;
+			x-= Main.SCROLL_SPEED;
 		}
 		else 
 			x = 1248;

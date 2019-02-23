@@ -3,7 +3,8 @@ import javax.swing.JFrame;
 
 public class Main {
 	final static int HEIGHT = 710,
-			  	WIDTH = 640;
+			  	WIDTH = 1000,
+			  	SCROLL_SPEED = 4;
 	
 	public static void main(String args[]){
 		JFrame frame = new JFrame("Horse Jump V.0001");

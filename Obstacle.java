@@ -1,6 +1,7 @@
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.net.URL;
+import java.util.Random;
 
 import javax.imageio.ImageIO;
 
@@ -8,6 +9,8 @@ public class Obstacle {
 	BufferedImage obstacleImage;
 	int x = Main.WIDTH;
 	int y = 0;
+	Random rand = new Random();
+	
 	public void initObstacleImage()
 	{
 		
@@ -29,9 +32,9 @@ public class Obstacle {
 	{
 		if(x > 0-obstacleImage.getWidth())
 		{
-			x-= 2;
+			x-= Main.SCROLL_SPEED;
 		}
 		else 
-			x = Main.WIDTH;
+			x = Main.WIDTH + rand.nextInt(Main.WIDTH);
 	}
 }
