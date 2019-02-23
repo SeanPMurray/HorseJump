@@ -2,7 +2,7 @@ import javax.swing.JFrame;
 
 
 public class Main {
-	final static int HEIGHT = 640,
+	final static int HEIGHT = 710,
 			  	WIDTH = 640;
 	
 	public static void main(String args[]){

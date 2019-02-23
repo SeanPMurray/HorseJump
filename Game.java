@@ -14,6 +14,7 @@ public class Game extends JPanel implements KeyListener {
     Background bg2 = new Background(1250);
     public Game()
     {
+    	player.initPlayerImage();
         this.addKeyListener(this);
         setFocusable(true);
     }

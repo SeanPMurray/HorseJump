@@ -1,26 +1,33 @@
-import java.awt.Color;
+
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Toolkit;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
+import java.awt.image.BufferedImage;
+import java.net.URL;
 
-public class Player {
+import javax.imageio.ImageIO;
+public  class Player {
 
 	boolean grounded = true;
 	long count = 0;
 	final int x = 100;
-	int y = 500;
+	int y = 415;
 	int jumpPower = 0;
-	Image playerImages = Toolkit.getDefaultToolkit().getImage("Images/NinjaFirstEddition.png");
+	BufferedImage playerImage;
 	
+	public void initPlayerImage()
+	{
+		
+		try	{
+			URL horse = this.getClass().getResource("Horse_Running.png");
+			playerImage = ImageIO.read(horse);
+		}
+		catch(Exception e) {};	
+	}
 	public void drawPlayer(Graphics g)
 	{
-		if(y == 500 && !Game.jump){
-			
-		}
-		g.fillRect(x, y, 50, 50);
+		g.drawImage(playerImage.getSubimage( 0, 0, 300, 300), x, y, null);
+
 	}
 	
 	public void jump()
@@ -29,12 +36,12 @@ public class Player {
 			jumpPower += 2;
 		else if (!Game.jump && jumpPower > 0)
 		{
-			y -= 2;
+			y -= 10;
 			jumpPower --;
 		}
-		else if(!Game.jump && jumpPower == 0 && y < 500)
+		else if(!Game.jump && jumpPower == 0 && y < 415)
 		{
-			y += 2;
-		}
+			y += 10;
+		} 
 	}
 }

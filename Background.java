@@ -13,7 +13,7 @@ public class Background {
 	}
 	public void drawBackground(Graphics g)
 	{
-		g.drawImage(backgroundImage, x, y, 1250, 590, null);
+		g.drawImage(backgroundImage, x, y, null);
 		
 	}
 	public void scrollBackground()
