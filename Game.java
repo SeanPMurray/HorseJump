@@ -36,6 +36,7 @@ public class Game extends JPanel implements KeyListener {
         
         player.jump();
         player.drawPlayer(g);
+        player.drawJumpPower(g);
         
         SleepRefresh();
     }

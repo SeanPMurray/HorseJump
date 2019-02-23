@@ -4,6 +4,9 @@ import java.awt.image.BufferedImage;
 import java.net.URL;
 
 import javax.imageio.ImageIO;
+
+
+
 public  class Player {
 
 	final int x = 100;
@@ -13,6 +16,7 @@ public  class Player {
 	int frameY = 0;
 	int count = 0;
 	BufferedImage playerImage;
+	
 	
 	public void initPlayerImage()
 	{
@@ -37,6 +41,11 @@ public  class Player {
 		}
 	}
 
+	public void drawJumpPower(Graphics g)
+	{
+		g.drawString("Jump Power: " + jumpPower, 25, 25);
+	}
+	
 	public void jump()
 	{
 		if(Game.jump) jumpPower ++;
