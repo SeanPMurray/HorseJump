@@ -10,8 +10,7 @@ public class Game extends JPanel implements KeyListener {
 	private static final long serialVersionUID = 1L;
 	
 	Player player = new Player();
-    Background bg = new Background(0);
-    Background bg2 = new Background(1250);
+    Background bg = new Background();
     Obstacle logs = new Obstacle();
     
     public Game()
@@ -27,11 +26,9 @@ public class Game extends JPanel implements KeyListener {
         g.clearRect(0, 0, Main.WIDTH, Main.HEIGHT); 
         
         bg.scrollBackground();
-        bg2.scrollBackground();
         logs.scrollObstacle();
  
         bg.drawBackground(g);
-        bg2.drawBackground(g);
         logs.drawObstacle(g);
         
         player.jump();
