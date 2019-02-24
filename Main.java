@@ -7,7 +7,7 @@ public class Main {
 			  	SCROLL_SPEED = 4;
 	
 	public static void main(String args[]){
-		JFrame frame = new JFrame("Horse Jump V.0001");
+		JFrame frame = new JFrame("Horse Jump V.1");
 		frame.add(new Game());
 		frame.setSize(WIDTH,HEIGHT);
 		frame.setVisible(true);

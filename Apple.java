@@ -7,9 +7,9 @@ import javax.imageio.ImageIO;
 
 public class Apple {
 		BufferedImage appleImage;
-		int x = Main.WIDTH;
-		int y = 0;
 		Random rand = new Random();
+		int x = Main.WIDTH;
+		int y =  rand.nextInt(Main.HEIGHT-100)+50;
 		
 		public void initAppleImage()
 		{
@@ -19,8 +19,6 @@ public class Apple {
 				appleImage = ImageIO.read(horse);
 			}
 			catch(Exception e) {};	
-			
-			y = rand.nextInt(Main.HEIGHT-100)+50;
 		}
 		
 		public void drawApple(Graphics g)
@@ -34,7 +32,10 @@ public class Apple {
 			{
 				x-= Main.SCROLL_SPEED;
 			}
-			else 
+			else
+			{
 				x = Main.WIDTH + rand.nextInt(Main.WIDTH);
+				y =  rand.nextInt(Main.HEIGHT-100)+150;
+			}
 		}
 }
